@@ -14,6 +14,8 @@ bài tập **tự chấm điểm** và lời giải ẩn.
 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/donamvn/thcs-lap-trinh-python/blob/main/05_tim_kiem.ipynb) | Bài 5 - Thuật toán tìm kiếm |
 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/donamvn/thcs-lap-trinh-python/blob/main/06_sap_xep.ipynb) | Bài 6 - Thuật toán sắp xếp |
 
+> Học sinh muốn học **C++** và luyện thi HSG Tin học: xem bản [thcs-lap-trinh-cpp](https://github.com/donamvn/thcs-lap-trinh-cpp).
+
 ## Hướng dẫn cho học sinh
 1. Bấm nút **Open in Colab** của bài muốn học.
 2. Bấm **Tệp → Lưu bản sao vào Drive** để có bản của riêng em (bài làm sẽ được lưu).
