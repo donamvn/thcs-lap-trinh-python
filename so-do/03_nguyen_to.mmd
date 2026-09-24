@@ -1,0 +1,33 @@
+flowchart TD
+    s1(["Bắt đầu"])
+    a[/"Nhập n"/]
+    b{"n #lt; 2 ?"}
+    b1[/"Không nguyên tố"/]
+    c["d = 2"]
+    d{"d × d ≤ n ?"}
+    f{"n % d == 0 ?"}
+    f1[/"Không nguyên tố"/]
+    g["d = d + 1"]
+    h[/"Là số nguyên tố"/]
+    e1(["Kết thúc"])
+    s1 --> a
+    a --> b
+    b -->|Đúng| b1
+    b -->|Sai| c
+    c --> d
+    d -->|Đúng| f
+    f -->|Đúng| f1
+    f -->|Sai| g
+    g --> d
+    d -->|Sai| h
+    h --> e1
+    b1 --> e1
+    f1 --> e1
+    classDef batdau fill:#b2f2bb,stroke:#2b8a3e,color:#000
+    class s1,e1 batdau
+    classDef nhapxuat fill:#a5d8ff,stroke:#1971c2,color:#000
+    class a,b1,f1,h nhapxuat
+    classDef xuly fill:#ffec99,stroke:#e67700,color:#000
+    class c,g xuly
+    classDef dieukien fill:#ffc9c9,stroke:#c92a2a,color:#000
+    class b,d,f dieukien

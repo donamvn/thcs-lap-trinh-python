@@ -1,0 +1,35 @@
+flowchart TD
+    s1(["Bắt đầu"])
+    a[/"Nhập a (đã sắp xếp), x"/]
+    b["trai = 0<br/>phai = len(a) - 1"]
+    c{"trai ≤ phai ?"}
+    d["giua = (trai + phai) // 2"]
+    f{"a[giua] == x ?"}
+    f1[/"Tìm thấy tại giua"/]
+    g{"a[giua] #lt; x ?"}
+    g1["trai = giua + 1<br/>(tìm nửa phải)"]
+    g2["phai = giua - 1<br/>(tìm nửa trái)"]
+    h[/"Không tìm thấy (-1)"/]
+    e1(["Kết thúc"])
+    s1 --> a
+    a --> b
+    b --> c
+    c -->|Đúng| d
+    d --> f
+    f -->|Đúng| f1
+    f -->|Sai| g
+    g -->|Đúng| g1
+    g -->|Sai| g2
+    g1 --> c
+    g2 --> c
+    c -->|Sai| h
+    h --> e1
+    f1 --> e1
+    classDef batdau fill:#b2f2bb,stroke:#2b8a3e,color:#000
+    class s1,e1 batdau
+    classDef nhapxuat fill:#a5d8ff,stroke:#1971c2,color:#000
+    class a,f1,h nhapxuat
+    classDef xuly fill:#ffec99,stroke:#e67700,color:#000
+    class b,d,g1,g2 xuly
+    classDef dieukien fill:#ffc9c9,stroke:#c92a2a,color:#000
+    class c,f,g dieukien

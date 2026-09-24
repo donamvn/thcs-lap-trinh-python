@@ -1,0 +1,24 @@
+flowchart TD
+    s1(["Bắt đầu"])
+    a[/"Nhập a, b"/]
+    b{"a == 0 ?"}
+    x[/"In nghiệm x = -b / a"/]
+    c{"b == 0 ?"}
+    c1[/"Vô số nghiệm"/]
+    c2[/"Vô nghiệm"/]
+    e1(["Kết thúc"])
+    s1 --> a
+    a --> b
+    b -->|Đúng| c
+    b -->|Sai| x
+    c -->|Đúng| c1
+    c -->|Sai| c2
+    c1 --> e1
+    c2 --> e1
+    x --> e1
+    classDef batdau fill:#b2f2bb,stroke:#2b8a3e,color:#000
+    class s1,e1 batdau
+    classDef nhapxuat fill:#a5d8ff,stroke:#1971c2,color:#000
+    class a,x,c1,c2 nhapxuat
+    classDef dieukien fill:#ffc9c9,stroke:#c92a2a,color:#000
+    class b,c dieukien

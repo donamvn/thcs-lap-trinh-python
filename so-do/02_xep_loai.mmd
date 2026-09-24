@@ -1,0 +1,29 @@
+flowchart TD
+    s1(["Bắt đầu"])
+    a[/"Nhập điểm d"/]
+    b{"d ≥ 8 ?"}
+    b1[/"Loại Tốt"/]
+    c{"d ≥ 6.5 ?"}
+    c1[/"Loại Khá"/]
+    d{"d ≥ 5 ?"}
+    d1[/"Loại Đạt"/]
+    f[/"Loại Chưa đạt"/]
+    e1(["Kết thúc"])
+    s1 --> a
+    a --> b
+    b -->|Đúng| b1
+    b -->|Sai| c
+    c -->|Đúng| c1
+    c -->|Sai| d
+    d -->|Đúng| d1
+    d -->|Sai| f
+    f --> e1
+    b1 --> e1
+    c1 --> e1
+    d1 --> e1
+    classDef batdau fill:#b2f2bb,stroke:#2b8a3e,color:#000
+    class s1,e1 batdau
+    classDef nhapxuat fill:#a5d8ff,stroke:#1971c2,color:#000
+    class a,b1,c1,d1,f nhapxuat
+    classDef dieukien fill:#ffc9c9,stroke:#c92a2a,color:#000
+    class b,c,d dieukien

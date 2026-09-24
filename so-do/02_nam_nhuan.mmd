@@ -1,0 +1,29 @@
+flowchart TD
+    s1(["Bắt đầu"])
+    a[/"Nhập năm y"/]
+    b{"y % 400 == 0 ?"}
+    t1[/"Nhuận"/]
+    c{"y % 100 == 0 ?"}
+    f1[/"Không nhuận"/]
+    d{"y % 4 == 0 ?"}
+    t2[/"Nhuận"/]
+    f2[/"Không nhuận"/]
+    e1(["Kết thúc"])
+    s1 --> a
+    a --> b
+    b -->|Đúng| t1
+    b -->|Sai| c
+    c -->|Đúng| f1
+    c -->|Sai| d
+    d -->|Đúng| t2
+    d -->|Sai| f2
+    f2 --> e1
+    t1 --> e1
+    f1 --> e1
+    t2 --> e1
+    classDef batdau fill:#b2f2bb,stroke:#2b8a3e,color:#000
+    class s1,e1 batdau
+    classDef nhapxuat fill:#a5d8ff,stroke:#1971c2,color:#000
+    class a,t1,f1,t2,f2 nhapxuat
+    classDef dieukien fill:#ffc9c9,stroke:#c92a2a,color:#000
+    class b,c,d dieukien

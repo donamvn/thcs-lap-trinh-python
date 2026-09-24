@@ -1,0 +1,25 @@
+flowchart TD
+    s1(["Bắt đầu"])
+    a[/"Nhập n #gt; 0"/]
+    b["dem = 0"]
+    c{"n #gt; 0 ?"}
+    d["n = n // 10"]
+    f["dem = dem + 1"]
+    g[/"In ra dem"/]
+    e1(["Kết thúc"])
+    s1 --> a
+    a --> b
+    b --> c
+    c -->|Đúng| d
+    d --> f
+    f --> c
+    c -->|Sai| g
+    g --> e1
+    classDef batdau fill:#b2f2bb,stroke:#2b8a3e,color:#000
+    class s1,e1 batdau
+    classDef nhapxuat fill:#a5d8ff,stroke:#1971c2,color:#000
+    class a,g nhapxuat
+    classDef xuly fill:#ffec99,stroke:#e67700,color:#000
+    class b,d,f xuly
+    classDef dieukien fill:#ffc9c9,stroke:#c92a2a,color:#000
+    class c dieukien
